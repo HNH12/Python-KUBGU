@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="{% static 'css/update-style.css' %}">
+    <title>Изменение записи</title>
+</head>
+<body>
+<header>
+        <div class="header-item">
+            <div class="title-header">
+                Магазин мебели и техники
+            </div>
+        </div>
+    </header>
+    <div class="under-header">
+        <div class="under-header-item">
+            <div class="tab-item">
+                Таблица покупок
+            </div>
+            <div class="tab-item punct">
+                |
+            </div>
+            <div class="tab-item active-item">
+                Изменение записи
+            </div>
+        </div>
+    </div>
+    <form method="POST">
+    {% csrf_token %}
+    <select name="list-sales" id='select-sale' onchange="WriteSelectedItem()">
+        {% for row in array %}
+        <option>
+            {% for field in row %} {{ field }}  {% endfor %}
+        </option>
+        {% endfor %}
+    </select>
+    <div class="div-info-product">
+        <div>
+            <label class="label-product">Изготовитель</label>
+            <input class='product-input' name='maker-product' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Тип</label>
+            <input class='product-input' name='type-product' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Название</label>
+            <input class='product-input' name='name-product' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Цена до скидки</label>
+            <input class='product-input' name='price-product-without-discount' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Скидка</label>
+            <input class='product-input' name='discount-product' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Цена со скидкой</label>
+            <input class='product-input' name='price-product-with-discount' type='text' disabled>
+        </div>
+        <div>
+            <label class="label-product">Страна доставки</label>
+            <input class='product-input' name='country' type='text' placeholder='страна' autocomplete="off">
+        </div>
+        <div>
+            <label class="label-product">Город доставки</label>
+            <input class='product-input' name='city' type='text' placeholder='город' autocomplete="off">
+        </div>
+        <div>
+            <label class="label-product">Улица доставки</label>
+            <input class='product-input' name='street' type='text' placeholder='улица' autocomplete="off">
+        </div>
+        <input class="main-button update" type="submit" value="Изменить" >
+    </div>
+</form>
+ <script src="../static/script-js/update-script.js"></script>
+</body>
+</html>

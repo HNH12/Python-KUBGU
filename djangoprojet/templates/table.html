@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main-style.css' %}">
+    <title>Магазин мебели и техники</title>
+</head>
+<body>
+<header>
+    <div class="header-item">
+        <div class="title-header">
+            Магазин мебели и техники
+        </div>
+        <div class="welcome-user">
+            Добро пожаловать, <span class="user">пользователь</span>
+        </div>
+    </div>
+</header>
+<div class="under-header">
+    <div class="under-header-item">
+        <p class="tab-item active-item">
+            Таблица покупок
+        </p>
+    </div>
+</div>
+<div class="buttons">
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Добавить запись" name="app-btn" class="main-button add">
+    </form>
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Изменить запись" name="chg-btn" class="main-button update">
+    </form>
+</div>
+<table class='main-table'>
+    <tr>
+        <th>Номер покупки</th>
+        <th>Изготовитель продукта</th>
+        <th>Тип продукта</th>
+        <th>Название продукта</th>
+        <th>Цена (до скидки)</th>
+        <th>Скидка</th>
+        <th>Цена после скидки</th>
+        <th>Адрес доставки</th>
+    </tr>
+    {% for row in array %}
+    <tr>
+        {% for field in row %}
+            <td>
+                {{ field }}
+            </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/append-style.css' %}">
+    <title>Добавление новой покупки</title>
+</head>
+<body>
+    <header>
+        <div class="header-item">
+            <div class="title-header">
+                Магазин мебели и техники
+            </div>
+        </div>
+    </header>
+    <div class="under-header">
+        <div class="under-header-item">
+            <div class="tab-item">
+                Таблица покупок
+            </div>
+            <div class="tab-item punct">
+                |
+            </div>
+            <div class="tab-item active-item">
+                Добавление записи
+            </div>
+        </div>
+    </div>
+    <form class='form-add' method="POST">
+        {% csrf_token %}
+        <div class='product-list'>
+            <label>Товар:</label>
+            <select name='list_product'>
+                {% for row in fields %}
+                    <option>
+                        {% for field in row %} {{ field }} {% endfor %}
+                    </option>
+                {% endfor %}
+            </select>
+        </div>
+        <div class='checkbox-div'>
+            <input class='checkBox' name='list_address' type='checkbox' not(checked) onchange='processing_delivery()'>
+            <label for='list_address'>Доставка</label>
+        </div>
+        <div>
+            <input class='address' name='country' type='text' autocomplete="off" placeholder="Страна" disabled>
+            <input class='address' name='city' type='text' autocomplete="off" placeholder="Город" disabled>
+            <input class='address' name='street' type='text' autocomplete="off" placeholder="Улица" disabled>
+        </div>
+        <input type='submit' value='Добавить' class="main-button add">
+    </form>
+    <script src="../static/script-js/main-script.js"></script>
+</body>
+</html>

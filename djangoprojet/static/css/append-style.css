@@ -1,0 +1,148 @@
+body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #417690;
+}
+
+.header-item {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 10px 40px;
+}
+
+.title-header {
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 24px;
+    margin: auto 0;
+    color: #F5DD5D;
+}
+
+.under-header-item {
+    display: flex;
+    justify-content: left;
+    height: 16px;
+    padding: 10px 40px;
+    background-color: #79AEC8;
+}
+
+.tab-item {
+    padding-right: 10px;
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.tab-item.punct {
+    font-family: Roboto, 'Lucida Grande';
+    color: #C4DCE8;
+}
+
+.tab-item.active-item{
+    color: #C4DCE8;
+}
+
+.main-button {
+    background-repeat: no-repeat;
+    background-size: 15px;
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 11px;
+    background-position: right 8px center;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #79AEC8;
+}
+
+.main-button:active, .main-button:focus {
+  outline: none;
+}
+.main-button::-moz-focus-inner {
+  border: 0;
+}
+
+.main-button:hover {
+    background-color: #609AB6;
+    cursor: pointer;
+}
+
+.main-button.add {
+    /*background-image: url(../icons/cart-70-64.ico);*/
+}
+
+.form-add {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+.form-add * {
+    margin: 10px;
+    padding: 10px;
+}
+
+/*.address-form {*/
+/*    position: relative;*/
+/*}*/
+
+.address-group {
+    position: relative;
+}
+
+.address {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    background-color: transparent;
+    padding: 0 0 10px 0;
+    outline: none;
+    transition: 0.3s;
+    padding:10px;
+    border-bottom:0;
+    box-shadow:0 0 2px 1px rgba(0,0,0,0.06);
+    opacity: 0;
+}
+
+.address:focus {
+    border-bottom: 1px solid #417690;
+ }
+
+select[name=list_product] {
+    padding:10px;
+    border-bottom:0;
+    box-shadow:0 0 2px 3px rgba(0,0,0,0.06);
+    appearance: none;
+    display: grid;
+    outline: none;
+}
+
+select[name=list_product]:focus {
+    border: 1px solid #417690;
+}
+
+select[name=list_product]:not(:focus) {
+    border: 1px solid #e0e0e0;
+}
+
+.product-list label {
+    color: #666666;
+}
+
+.checkbox-div label {
+    color: #666666;
+}

@@ -1,0 +1,125 @@
+body {
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    background-color: #417690;
+}
+
+.header-item {
+    display: flex;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 10px 40px;
+}
+
+.title-header {
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 24px;
+    margin: auto 0;
+    color: #F5DD5D;
+}
+
+.welcome-user {
+    margin: auto 0;
+    color: #FFFFCC;
+}
+
+
+.user {
+    font-weight: 700;
+}
+
+.under-header-item {
+    display: flex;
+    justify-content: right;
+    height: 16px;
+    padding: 10px 40px;
+    background-color: #79AEC8;
+}
+
+.main-table {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    border: 2px solid white;
+}
+
+.tab-item {
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 14px;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.tab-item.active-item{
+    color: #C4DCE8;
+}
+
+.main-button {
+    background-repeat: no-repeat;
+    background-size: 15px;
+    font-family: Roboto, 'Lucida Grande';
+    font-size: 11px;
+    background-position: right 8px center;
+    padding-left: 12px;
+    padding-right: 32px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border: 0px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #999999;
+}
+
+.main-button:active, .main-button:focus {
+  outline: none;
+}
+.main-button::-moz-focus-inner {
+  border: 0;
+}
+
+.main-button:hover {
+    background-color: #417690;
+    cursor: pointer;
+}
+
+.main-button.add {
+    background-image: url(../icons/cart-70-64.ico);
+}
+
+.main-button.update {
+    background-image: url(../icons/edit-2-64.ico);
+}
+
+.buttons {
+    width: 80%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-table th {
+    font-size: 11px;
+    padding: 10px 0;
+    background-color: #f6f6f6;
+    color: #666666;
+}
+
+.main-table td {
+    font-size: 13px;
+    padding: 6px;
+    border: 1px solid;
+    color: #666666;
+    border-color: #eee;
+    text-align: left;
+}
+
+.main-table tr {
+    padding: 10px;
+}
