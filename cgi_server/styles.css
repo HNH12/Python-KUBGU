@@ -1,0 +1,81 @@
+table {
+	margin: 200px auto 0;
+	width: 1500px;
+	border: 2px solid #ccc;
+	text-align: center;
+}
+
+th {
+	border: 3px solid #ccc;
+}
+
+td {
+	border: 2px solid #ccc;
+}
+
+caption {
+	width: 300px;
+	margin: 0 auto;
+	font-size: 30px;
+	color: #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 20px;
+}
+
+.address {
+	opacity: 0;
+	transition: opacity .3s linear;
+}
+
+select {
+	display: block;
+	width: 150px;
+}
+
+.product-list {
+	text-align: center;
+}
+
+.product-list > label {
+	line-height: 2;
+}
+
+.form-add {
+	width: 240px;
+	margin: 200px auto 0;
+	padding: 30px;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	align-items: center;
+	border: 2px inset #ccc;
+}
+
+.div-discount {
+	display: flex;
+	justify-content: space-between;
+	width: 150px;
+}
+
+.discount {
+	display: block;
+	width: 50px;
+}
+
+.div-discount-second{
+	display: flex;
+	width: 100px;
+}
+
+.div-discount-second > label {
+	margin-left: 5px;
+}
+
+.main-form > input{
+	display: block;
+	width: 170px;
+	margin: 30px auto 0;
+}
